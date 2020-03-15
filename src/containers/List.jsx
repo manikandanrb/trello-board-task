@@ -75,6 +75,7 @@ const List = (props) => {
   const toggle = () => {
     setModal(!modal)
     setmodalEditDesc(false);
+    setnewCardDesc('');
     setnewComment('');
   };
 
