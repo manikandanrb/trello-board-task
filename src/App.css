@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+body {
+	margin: 0;
+	overflow-x: auto;
+	color: #2e444e;
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#eedeff), to(#667eea));
+	background-image: linear-gradient(0deg, #eedeff 0, #667eea);
+	min-height: 100vh;
+	font-family: Helvetica Neue, Arial, Helvetica, sans-serif
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a:-webkit-any-link {
+	text-decoration: none;
+	-webkit-text-decoration-color: none;
+	text-decoration-color: none;
+	color: #2e444e
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:focus {
+	outline: none
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.lists-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	padding: 8px
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width:768px) {
+	.lists-wrapper {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column
+	}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list {
+	width: 268px;
+	background: #f8f8f8;
+	font-size: 14px;
+	margin: 8px;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	max-height: 100%
+}
+
+.list,
+.list .card-title {
+	border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex
+}
+
+.list .card-title {
+	background: #fff;
+	-webkit-box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .1);
+	box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .1);
+	margin: 0 10px 10px;
+    padding: 8px;
+	position: relative;
+	overflow-wrap: break-word;
+	overflow: visible;
+	word-wrap: break-word;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center
+}
+.list .card-title span {
+    margin: auto;
+    width: 195px;
+    cursor: pointer;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.modal-close {
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+.modal-form {
+    padding-top: 40px;
+}
+
+.modal-form label {
+    position: relative;
+    left: 10px;
+    width: 160px;
+}
+.modal-form label button {
+    margin-top: -5px;
+}
+
+.modal-form .comments .comment-list {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.modal-form .comments .comment-list div{
+    display: block;
+    width: 250px;
+}
+
+.list .card-title:active,
+.list .card-title:focus,
+.list .card-title:hover {
+	-webkit-box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .3);
+	box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .3)
 }
